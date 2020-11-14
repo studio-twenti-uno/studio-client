@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+/** @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react'
+import { useState, Suspense, lazy } from 'react'
+// import { Router } from '@reach/router'
+
+// My components
+const Preloader = lazy(() => import('./utilities/Preloader'))
+const Navigation = lazy(() => import('./components/Navigation'))
+
 
 function App() {
+  // State
+  const [theme, setTheme] = useState('light') 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense
+      fallback={
+        'loading...'
+      }
+    >
+      <Navigation theme={theme} setTheme={setTheme}/>
+    </Suspense>
   );
 }
 
