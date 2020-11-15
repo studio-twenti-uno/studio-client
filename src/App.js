@@ -62,7 +62,7 @@ function App() {
           <DisplayHeading theme={theme} customCss={css`
             display: flex;
             flex-direction: column;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
           `}>
               <span>Enterprise driven</span>
               <span>digitalization.</span>
@@ -70,7 +70,7 @@ function App() {
           {/* paragraph intro */}
           <Paragraph theme={theme} customCss={css`
             max-width: 600px;
-            line-height: 1.8;
+            line-height: 1.5;
           `}>
             studio twenti uno is a digital arts and engineering studio dedicated to the transformation and adaptation of enterprises into the digital world.
           </Paragraph>
@@ -82,7 +82,7 @@ function App() {
 
             max-width: 450px;
 
-            margin-top: 1.8rem;
+            margin-top: 1.5rem;
 
             @media(max-width: 500px) {
               flex-direction: column;
@@ -179,10 +179,10 @@ function App() {
         </Container>
         {/* As seen in container */}
         <Container theme={theme} flexDirection='column' customCss={css`
-          padding: 9rem 0;
+          padding: 4.5rem 0;
 
           @media(max-width: 500px){
-            padding: 4.5rem 0;
+            padding: 3rem 0;
             text-align: center;
 
             display: flex;
