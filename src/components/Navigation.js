@@ -9,6 +9,7 @@ import PositiveButton from '../utilities/PositiveButton'
 
 // Assets
 import { ReactComponent as Logotype } from '../svg/logotype.svg'
+import { ReactComponent as LogotypeWhite } from '../svg/logotypeWhite.svg'
 import { ReactComponent as Logo } from '../svg/logo.svg'
 
 export default function Navigation({
@@ -56,12 +57,36 @@ export default function Navigation({
           css={css`
             width: 18rem;
             height: auto;
-            fill: ${theme === 'dark' ? 'var(--lightColor)' : 'var(--darkColor)'};
+            fill: 'var(--darkColor)';
             transition: all 0.3s ease-in-out;
 
-            #21 {
-              fill: ${theme === 'dark' ? 'var(--lightColor)' : 'var(--darkColor)'}
+            ${theme === 'dark' && css`
+              display: none;
+            `};
+
+            :hover {
+              transform: scale(1.02);
             }
+
+            :active {
+              transform: scale(1);
+            }
+
+            @media (max-width: 420px){
+              display: none;
+            }
+          `}
+        />
+        <LogotypeWhite
+          css={css`
+            width: 18rem;
+            height: auto;
+            fill: 'var(--lightColor)';
+            transition: all 0.3s ease-in-out;
+
+            ${theme === 'light' && css`
+              display: none;
+            `};
 
             :hover {
               transform: scale(1.02);
@@ -82,10 +107,6 @@ export default function Navigation({
             height: auto;
             fill: ${theme === 'dark' ? 'var(--lightColor)' : 'var(--darkColor)'};
             transition: all 0.3s ease-in-out;
-
-            #21 {
-              fill: ${theme === 'dark' ? 'var(--lightColor)' : 'var(--darkColor)'}
-            }
 
             :hover {
               transform: scale(1.02);

@@ -6,7 +6,7 @@ import { useState, Suspense, lazy } from 'react'
 // import { Router } from '@reach/router'
 
 // My components
-const Preloader = lazy(() => import('./utilities/Preloader'))
+// const Preloader = lazy(() => import('./utilities/Preloader'))
 const Navigation = lazy(() => import('./components/Navigation'))
 
 
@@ -21,6 +21,7 @@ function App() {
       }
     >
       <Navigation theme={theme} setTheme={setTheme}/>
+
     </Suspense>
   );
 }
