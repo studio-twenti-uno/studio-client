@@ -22,12 +22,10 @@ export default function Form({
       css={css`
         display: flex;
         flex-direction: column;
-        max-width: 390px;
-        margin: 0 auto;
+        width: 100%;
 
         @media (max-width: 390px) {
           width: 95vw;
-          margin: 0 auto;
         }
 
         ${customCss && customCss};
