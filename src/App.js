@@ -41,7 +41,7 @@ function App() {
       <Navigation theme={theme} setTheme={setTheme}/>
       {/* Display Heading */}
       <main css={css`
-        margin-top: 8.1rem;
+        margin-top: 7.2rem;
         background-color: ${theme === 'light' ? 'var(--lightColor)' : 'var(--darkColor)'};
         padding-top: 12rem;
 
