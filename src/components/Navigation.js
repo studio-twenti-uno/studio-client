@@ -57,7 +57,7 @@ export default function Navigation({
           css={css`
             width: 18rem;
             height: auto;
-            fill: 'var(--darkColor)';
+            fill: var(--darkColor);
             transition: all 0.3s ease-in-out;
 
             ${theme === 'dark' && css`
