@@ -41,15 +41,15 @@ function App() {
       <Navigation theme={theme} setTheme={setTheme}/>
       {/* Display Heading */}
       <main css={css`
-        margin-top: 7.2rem;
+        margin-top: 5.4rem;
         background-color: ${theme === 'light' ? 'var(--lightColor)' : 'var(--darkColor)'};
         padding-top: 12rem;
 
         @media(max-width: 500px){
-          margin-top: 6.3rem;
+          margin-top: 3.6rem;
         }
         @media(max-width: 390px){
-          margin-top: 1.2rem;
+          margin-top: 0rem;
         }
       `}>
         {/* Text and CTA container */}
