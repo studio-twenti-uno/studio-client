@@ -8,20 +8,12 @@ import Label from './Label'
 
 export default function EmailInput({
   placeholder,
-  state,
-  setState,
+  value,
+  handleChange,
   theme,
   required,
   customCss
 }) {
-  // Change Handler
-  const handleChange = (e) => {
-    setState({
-      ...state,
-      [e.target.name]: e.target.value.trim(),
-    })
-  }
-
   return (
     <div
       css={css`
@@ -36,23 +28,23 @@ export default function EmailInput({
           css={css`
             margin-top: 0.9rem;
 
-            font-family: 'Montserrat';
+            font-family: 'Raleway';
             font-size: 1.5rem;
-            font-weight: 400;
+            font-weight: var(--regular);
             color: ${theme === 'light'
               ? 'var(--darkColor)'
               : 'var(--lightColor)'};
 
             background-color: ${theme === 'light'
-              ? 'var(--lightColor-darker)'
-              : 'var(--darkColor-lighter)'};
+              ? 'var(--lightColor-dark)'
+              : 'var(--darkColor-light)'};
 
             outline: none;
             border: none;
             border-bottom: 0.3 solid
               ${theme === 'light'
-                ? 'var(--lightColor-darker)'
-                : 'var(--darkColor-lighter)'};
+                ? 'var(--lightColor-dark)'
+                : 'var(--darkColor-light)'};
 
             padding: 0.9rem 0.9rem;
             border-radius: 0.6rem;
@@ -66,7 +58,7 @@ export default function EmailInput({
             }
 
             ::-webkit-input-placeholder {
-              font-family: 'Montserrat';
+              font-family: 'Raleway';
             }
 
             :focus {
@@ -82,7 +74,7 @@ export default function EmailInput({
           name='email'
           type='email'
           placeholder={placeholder}
-          value={state['email']}
+          value={value}
           onChange={handleChange}
           required={required}
         />
