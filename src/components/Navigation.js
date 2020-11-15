@@ -142,7 +142,7 @@ export default function Navigation({
               transform: translateY(0.12px);
             }
 
-            @media (max-width: 330px){
+            @media (max-width: 420px){
               display: none;
             }
           `}>

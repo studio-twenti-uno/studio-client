@@ -16,7 +16,9 @@
 :root {
   /* color variables */
   --darkColor: #212121;
+  --darkColor-light: #6e6e6e;
   --lightColor: #fafafa;
+  --lightColor-dark: #d4d4d4;
   /* Utilities */
   --successColor: #32cf52;
   --dangerColor: #cf1d37;
@@ -58,7 +60,6 @@
 html {
   font-size: 62.5%; /* 1rem = 16px | 62.5%16px = 10px => 1rem = 10px */
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* Global Styles */

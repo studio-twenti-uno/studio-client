@@ -8,8 +8,8 @@ export default function Subheading({ children, theme, customCss }) {
     <h3
       css={css`
         font-size: var(--subheading);
-        font-weight: 500;
-        font-family: 'Montserrat';
+        font-weight: 600;
+        font-family: 'Raleway';
         color: ${theme === 'dark' ? 'var(--lightColor)' : 'var(--darkColor)'};
 
         ${customCss && customCss};

@@ -20,6 +20,10 @@ export default function Container({
         max-width: 980px;
         margin: 0 auto;
 
+        @media (max-width: 980px){
+          max-width: 95vw;
+        }
+
         ${customCss && customCss};
       `}
     >
